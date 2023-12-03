@@ -23,8 +23,10 @@ program hashcodes
      do i=1,11
         j=index(c,callsign(i:i)) - 1
         n8(k)=38*n8(k) + j
+        print *, k, i, j, n8(k)
      enddo
      ihash(k)=ishft(nprime*n8(k),nbits(k)-64)
+     print *, ihash(k)
   enddo
   ih22_biased=ihash(3) + NTOKENS
   write(*,1000) callsign,ihash,ih22_biased
