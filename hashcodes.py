@@ -2,8 +2,8 @@
 
 """ An implementation of hashcodes.f90 in python.
 
-This is an implementation of hashcodes.f90 in Python. The source code for
-hashcodes.f90 is available from the ARRL QEX Additional Resources archive
+This is a Python implementation of hashcodes.f90 from WSJT-X. The source code
+for hashcodes.f90 is available from the ARRL QEX Additional Resources archive
 at https://www.arrl.org/files/file/QEX%20Binaries/2020/ft4_ft8_protocols.tgz
 from "The FT4 and FT8 Communications Protocols" published in the July/August
 2020 issue of QEX written by Steve Franke, K9AN, Bill Somerville, G4WJS (SK),
