@@ -1,5 +1,6 @@
 hashcodes
-.vscode/tasks.json
+.vscode
 hashcodes.f90
 temp*.py
 *.pyc
+.venv

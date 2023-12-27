@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hash Results</title>
+</head>
+<body>
+    <h1>WSJT-X FT-8 Hash Results:</h1>
+    <p>Callsign: {{ callsign }}<br>
+    Hash for 10, 12, 22 bits: {{ hash_list }}<br>
+    Biased for storage in c28: {{ storage }}<br>
+    <a href="{{ url_for('calculate_again') }}">Calculate Again</a>
+</body>
+</html>
