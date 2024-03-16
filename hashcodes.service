@@ -7,7 +7,7 @@ User = ubuntu
 Group=www-data
 WorkingDirectory=/home/ubuntu/hashcodes
 Environment="PATH=/home/ubuntu/hashcodes/.venv/bin"
-ExecStart=/home/ubuntu/hashcodes/.venv/bin/uwsgi -ini hashcodes.ini
+ExecStart=/home/ubuntu/hashcodes/.venv/bin/uwsgi --ini hashcodes.ini
 
 [Install]
 WantedBy=multi-user.target
