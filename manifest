@@ -1,0 +1,7 @@
+templates
+app.py
+hashcodes.ini
+hashcodes.py
+hashcodes.service
+wsgi.py
+.venv
