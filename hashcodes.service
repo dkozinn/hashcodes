@@ -1,0 +1,13 @@
+[Unit]
+Description=uWSGI instance to server hashcodes calculator
+After=network.target
+
+[Service]
+User = ubuntu
+Group=www-data
+WorkingDirectory=/home/ubuntu/hashcodes
+Environment="PATH=/home/ubuntu/hashcodes/.venv/bin"
+ExecStart=/home/ubuntu/hashcodes/.venv/bin/uwsgi -ini hashcodes.ini
+
+[Install]
+WantedBy=multi-user.target

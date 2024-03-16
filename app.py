@@ -1,5 +1,8 @@
-from flask import Flask, render_template, request, redirect, url_for
-from hashcodes import calc_hash  # Assuming calc_hash.py is in the same directory
+# pylint: disable=C0111,C0112,C0113,C0114,C0115,C0116
+
+from flask import Flask, redirect, render_template, request, url_for
+
+from hashcodes import calc_hash  # Assuming hashcodes.py is in the same directory
 
 app = Flask(__name__)
 
@@ -11,8 +14,9 @@ def index():
 
 @app.route("/calculate", methods=["POST"])
 def calculate():
-    input_string = request.form["input_string"]
+    input_string = request.form["callsign"]
     callsign, hash_list, storage = calc_hash(input_string)
+
     return render_template(
         "result.html",
         callsign=callsign,
@@ -27,4 +31,4 @@ def calculate_again():
 
 
 if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0")
+    app.run(debug=True, host="0.0.0.0", port=9090)
