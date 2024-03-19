@@ -1,13 +1,30 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hashcodes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='hashcodes.css')}}">
     <title>WSJT-X FT-8 Hash Calculator</title>
 </head>
+
+
 <body>
-    <h1>Enter a callsign to calculate its hash:</h1>
+    <h1>Enter a callsign to calculate its hash</h1>
+    <p>Hashcodes is a simple web application that generates hashcodes for any given string.</p>
     <form action="/calculate" method="POST">
-        <input type="text" name="callsign">
-        <button type="submit">Calculate</button>
+        <input type="text" name="callsign" placeholder="Enter a callsign">
+        <button type="submit">Generate Hashcode</button>
     </form>
+    <div id="Hashcode"></div>
+    <script src="hashcodes.js"></script>
+    {% if callsign %}
+    <br>
+    <p>Callsign: {{ callsign }}<br>
+        Hash for 10, 12, 22 bits: {{ hash_list }}<br>
+        Biased for storage in c28: {{ storage }}<br>
+        {% endif %}
 </body>
+
 </html>

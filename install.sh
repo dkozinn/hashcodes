@@ -12,9 +12,17 @@ deactivate
 mkdir $INSTALLDIR 2> /dev/null
 sudo chgrp www-data $INSTALLDIR
 
-xargs -a manifest cp -R -t $INSTALLDIR
-
 sudo cp hashcodes.service /etc/systemd/system
 sudo systemctl daemon-reload
 sudo systemctl enable hashcodes
-sudo systemctl restart hashcodes
+
+# Need to stop execution because otherwise won't be able to copy uwsgi binary
+sudo systemctl stop hashcodes
+xargs -a manifest cp -R -t $INSTALLDIR
+
+sudo systemctl start hashcodes
+
+sudo cp hashcodes.k2dbk.com /etc/nginx/sites-available
+sudo ln -s /etc/nginx/sites-available/hashcodes.k2dbk.com /etc/nginx/sites-enabled
+
+sudo systemctl reload nginx

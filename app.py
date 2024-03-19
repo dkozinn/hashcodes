@@ -2,7 +2,8 @@
 
 from flask import Flask, redirect, render_template, request, url_for
 
-from hashcodes import calc_hash  # Assuming hashcodes.py is in the same directory
+from hashcodes import \
+    calc_hash  # Assuming hashcodes.py is in the same directory
 
 app = Flask(__name__)
 
@@ -18,7 +19,7 @@ def calculate():
     callsign, hash_list, storage = calc_hash(input_string)
 
     return render_template(
-        "result.html",
+        "index.html",
         callsign=callsign,
         hash_list=hash_list,
         storage=storage,
