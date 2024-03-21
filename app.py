@@ -21,6 +21,9 @@ def calculate():
     return render_template(
         "index.html",
         callsign=callsign,
+        hash_10=hash_list[0],
+        hash_12=hash_list[1],
+        hash_22=hash_list[2],
         hash_list=hash_list,
         storage=storage,
     )
@@ -32,4 +35,4 @@ def calculate_again():
 
 
 if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0", port=9090)
+    app.run(debug=False, host="0.0.0.0", port=9090)

@@ -1,7 +1,9 @@
 templates
+static
 app.py
 hashcodes.ini
 hashcodes.py
 hashcodes.service
+hashcodes.js
 wsgi.py
 .venv

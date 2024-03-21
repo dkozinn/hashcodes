@@ -214,4 +214,4 @@ pyrightconfig.json
 .vscode
 hashcodes
 hashcodes.f90
-temp*.py
+temp-*

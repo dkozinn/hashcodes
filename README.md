@@ -12,3 +12,11 @@ it will provide the 10, 12, and 22 bit hashcodes as calculated by WSJT-X.
 
 This can be useful to determine if two callsigns generate the same hash, which
 can result in what appears to be an incorrect decode.
+
+Included in this repository is a small application using Flask that can be hosted on a website. A WSGI 
+server is needed to host the application. My implementation uses nginx as the server and uWSGI as the
+WSGI interface. 
+
+I recommend reviewing and modifying the install.sh script before using it. This, along with some of the 
+support files expect that the code will be run under /home/ubunbtu as it's root. You'll need to adjust that for your
+environment.

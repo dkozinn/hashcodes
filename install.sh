@@ -22,7 +22,9 @@ xargs -a manifest cp -R -t $INSTALLDIR
 
 sudo systemctl start hashcodes
 
-sudo cp hashcodes.k2dbk.com /etc/nginx/sites-available
-sudo ln -s /etc/nginx/sites-available/hashcodes.k2dbk.com /etc/nginx/sites-enabled
+# After using certbot this update isn't going to work. The two lines below should be done 
+# before running the certbot command
+# sudo cp hashcodes.k2dbk.com /etc/nginx/sites-available
+# sudo ln -s /etc/nginx/sites-available/hashcodes.k2dbk.com /etc/nginx/sites-enabled
 
 sudo systemctl reload nginx
