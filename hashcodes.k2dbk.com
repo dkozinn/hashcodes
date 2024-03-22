@@ -1,6 +1,6 @@
 server {
     listen 80;
-    server_name hashcodes.k2dbk.com;
+    server_name hashcodes.k2dbk.com hashcode.k2dbk.com;
 
     location / {
         include uwsgi_params;
